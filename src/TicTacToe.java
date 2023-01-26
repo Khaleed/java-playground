@@ -44,6 +44,7 @@ public class TicTacToe {
         }
     }
 
+    /** Calculates who won the game or if it is a tie. */
     public static String checkWinner(List<List<Integer>> combos) {
         for (List<Integer> combo : combos) {
             if (playerPositions.containsAll(combo)) {
@@ -57,6 +58,7 @@ public class TicTacToe {
         return " ";
     }
 
+    /** Allows user to place a piece on the game board. */
     public static void placeOnBoard(char[][] board, int pos, User user) {
         System.out.println("Pos" + pos);
         char move = ' ';
@@ -83,6 +85,7 @@ public class TicTacToe {
         }
     }
 
+    /** Exposes the game board on a console in System. */
     public static void showGameBoard(char[][] board) {
         for(char[] row : board) {
             for(char c : row) {
